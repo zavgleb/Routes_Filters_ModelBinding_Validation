@@ -24,13 +24,19 @@ namespace Routes_Filters_ModelBinding_Validation.Controllers
 
     public ViewResult Create() => View(new Person());
 
+    
+
     [HttpPost]
     public ViewResult Create(Person model) => View("IndexNullSafe", model);
+
+    public ViewResult Institution() => View(new Inst());
 
     public ViewResult CreateWithAddress() => View(new Person());
 
     [HttpPost]
     public ViewResult CreateWithAddress(Person model) => View("IndexWithAddress", model);
+
+    public ViewResult Institution(Inst model) => View("InstitutionView", model);
 
     public ViewResult NamesArray(string[] names) => View(names ?? new string[0]);
 
